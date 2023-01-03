@@ -15,5 +15,5 @@ server.use(routes)
 server.use(errors)
 
 server.listen(port, () => {
-    console.log (`Servidor rodando na porta ${port}`)
+    console.log (`Servidor rodando na portaa ${port}`)
 })
