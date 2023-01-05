@@ -5,7 +5,7 @@ import { body, param} from 'express-validator'
 export const userValidations = [
     body('name').notEmpty().withMessage('Nome é obrigadorio'),
     body('email').notEmpty().withMessage('E-mail é obrigatorio'),
-    body('password').notEmpty().withMessage('Não da pra logar sem senha né')
+    body('password').notEmpty().withMessage('Não da pra cadastrar sem senha né')
 ]
 
 export const userIdValidation = [
