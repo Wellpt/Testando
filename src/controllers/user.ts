@@ -23,9 +23,8 @@ export async function listUser(req:Request, res: Response) {
 //loguin usuarios
 export async function LogUser(req: Request<{},{}>, res: Response) {
     const { email } = req.body
-    //const { password } = req.body
+    const { password } = req.body
     const useCase = new LogUsersUseCase()
-    const loginUser = await useCase.handle(email)
-    //const passUser = await useCase.handle(password)
+    const loginUser = await useCase.handle(email, password)
     return res.json(loginUser)
 }
