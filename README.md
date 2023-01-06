@@ -48,7 +48,7 @@
 | `email` | `string` | **Obrigatório**
 | `password` | `string` | **Obrigatório**
 
-#### Para fazer o login usuario:
+#### Para deletar usuario:
 
 ```http
   POST /id
