@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 import { LogUsersUseCase } from "../useCases/LoginUser";
 import { CreateUserUseCase } from "../useCases/createUser";
 import { ListUsersUseCase } from "../useCases/listUser";
+import { DeleteUsersUseCase } from "../useCases/deleteUser";
 
 //Criar usuario
 export async function createUser(req:Request<{},{}>, res: Response) {
@@ -26,4 +27,15 @@ export async function LogUser(req: Request<{},{}>, res: Response) {
     const useCase = new LogUsersUseCase()
     const loginUser = await useCase.handle(email, password)
     return res.json(loginUser)
+}
+
+//Deletar usuario 
+export async function deleteUser(req: Request<{ id: string}>, res: Response) {
+    const { id } = req.params
+    const useCase = new DeleteUsersUseCase()
+    await useCase.handle (id)
+
+    return res.json({
+        messege: "Usuário deletado com sucesso!"
+    })
 }

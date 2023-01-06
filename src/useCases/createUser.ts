@@ -1,7 +1,6 @@
 import { v4 } from 'uuid'
 import { PrismaClient, User } from '@prisma/client'
 
-//import { crypt } from '../service/crypto'
 import { UserDto } from '../domain/dtos/user'
 
 const prisma = new PrismaClient()
