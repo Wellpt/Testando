@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 
-import { UserDto } from "../domain/dtos/user";
 import { LogUsersUseCase } from "../useCases/LoginUser";
 import { CreateUserUseCase } from "../useCases/createUser";
 import { ListUsersUseCase } from "../useCases/listUser";

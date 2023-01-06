@@ -13,5 +13,4 @@ model User {
   name String
   email String
   password String
-  salt String
 }
